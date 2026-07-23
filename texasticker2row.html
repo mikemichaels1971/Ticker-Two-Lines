@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* each ticker row */
+.ticker {
+  height: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ROW 1 -->
+<div class="ticker">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script>
+    var s1 = document.createElement('script');
+    s1.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+    s1.async = true;
+    s1.innerHTML = JSON.stringify({
+      "symbols": [
+        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq"},
+        {"proName": "FOREXCOM:DJI", "title": "Dow"},
+        {"proName": "CURRENCYCOM:GOLD", "title": "Gold"},
+        {"proName": "NASDAQ:NVDA", "title": "NVDA"},
+        {"proName": "NASDAQ:TSLA", "title": "TSLA"},
+        {"proName": "NYSE:XOM", "title": "XOM"},
+        {"proName": "NYSE:COP", "title": "COP"},
+        {"proName": "NYSE:OXY", "title": "OXY"}
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "locale": "en"
+    });
+    document.currentScript.parentNode.appendChild(s1);
+    </script>
+  </div>
+</div>
+
+<!-- ROW 2 -->
+<div class="ticker">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script>
+    var s2 = document.createElement('script');
+    s2.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+    s2.async = true;
+    s2.innerHTML = JSON.stringify({
+      "symbols": [
+        {"proName": "NYSE:NRG", "title": "NRG"},
+        {"proName": "NASDAQ:APA", "title": "APA"},
+        {"proName": "NYSE:CNP", "title": "CNP"},
+        {"proName": "NYSE:KMI", "title": "KMI"},
+        {"proName": "NASDAQ:BKR", "title": "BKR"},
+        {"proName": "NYSE:HAL", "title": "HAL"},
+        {"proName": "NYSE:FIX", "title": "FIX"},
+        {"proName": "NYSE:WM", "title": "WM"},
+        {"proName": "NYSE:SYY", "title": "SYY"},
+        {"proName": "NASDAQ:SPCX", "title": "SPCX"}
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "locale": "en"
+    });
+    document.currentScript.parentNode.appendChild(s2);
+    </script>
+  </div>
+</div>
+
+</body>
+</html>
+``
